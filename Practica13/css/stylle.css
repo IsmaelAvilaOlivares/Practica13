@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;   /* Esto ayuda a evitar que el tamaño de los elementos
+     se vea afectado por el relleno y el borde. */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+      sans-serif; /*se especifica la fuente que se usará para el texto en todos los elementos */
+    font-weight: bold; /*establece el grosor del texto en negrita para todos los elementos*/
+}
+
+.container {
+    display: flex; /* se comportarán como elementos flexibles.*/
+    flex-wrap: wrap;/* los elementos flexibles dentro del contenedor 
+    deben envolverse si no hay suficiente espacio en el contenedor*/
+}
+
+
+
+
+.left, .main, .right {
+    padding: 20px;/* Establece un relleno interno para crear espacio entre el
+    contenido y los bordes del elemento. */
+    text-align: center;/* Centra el texto dentro del elemento horizontalmente, 
+    alineando el contenido con el centro del elemento. */
+}
+
+.left {
+    background-color: blue;/* establece el color de fondo de un elemento*/
+    color: white; /*establece el color del texto dentro del elemento*/
+    flex: 1; /* permite a los elementos dentro de un contenedor ajustarse
+     dinámicamente a diferentes tamaños de pantalla*/
+}
+
+.main {
+    background-color: blueviolet;/* establece el color de fondo de un elemento*/
+    color: beige;/*establece el color del texto dentro del elemento*/
+    flex: 2;/* permite a los elementos dentro de un contenedor ajustarse
+    dinámicamente a diferentes tamaños de pantalla*/
+}
+
+.right {
+    background-color: blue;/* establece el color de fondo de un elemento*/
+    color: white; /*establece el color del texto dentro del elemento*/
+    flex: 1;/* permite a los elementos dentro de un contenedor ajustarse
+    dinámicamente a diferentes tamaños de pantalla*/
+}
+
+
+
+@media screen and (max-width: 600px) { /* se aplicarán solo a 
+    dispositivos con una pantalla de 600 píxeles*/
+    .left, .main, .right {
+        flex: 100%; /* los elementos pasados expandirán para ocupar
+         el 100% del espacio disponible en su contenedor*/
+    }
+}
+
